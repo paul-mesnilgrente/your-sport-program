@@ -29,6 +29,9 @@ gem 'jbuilder', '~> 2.7'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
+# Custom gems
+gem 'haml-rails', '~> 2.0'
+
 group :development, :test do
   gem 'boost-styles', github: 'boost/boost-styles'
   # Call 'binding.pry' anywhere in the code to stop execution and get a debugger
