@@ -58,4 +58,22 @@ Rails.application.configure do
 
   # Custom config goes here
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address: 'smtp.gmail.com',
+    port: 587,
+    domain: 'your-sport-program.com',
+    user_name: 'paul.mesnilgrente@gmail.com',
+    password: '@1ALRZhngCO*qu7oCA@te',
+    authentication: 'plain',
+    enable_starttls_auto: true
+  }
+  # config.smtp_settings = {
+  #   address: 'smtp.gandi.net',
+  #   port: 25,
+  #   authentication: :login,
+  #   user_name: 'web@paul-mesnilgrente.com',
+  #   password: 'F1zehNu1AwjpreFINQgD'
+  # }
 end

@@ -8,6 +8,16 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+# This could be done by using Figaro gem.
+# We decided to use this instead of Figaro for consistency
+begin
+  ENV.update(
+    YAML.load_file('config/application.yml')[Rails.env].except(*ENV.keys)
+  )
+rescue StandardError
+  {}
+end
+
 module YourSportProgram
   # Application configuration
   class Application < Rails::Application
