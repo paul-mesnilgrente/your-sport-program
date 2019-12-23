@@ -30,10 +30,14 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 # Custom gems
+gem 'devise', '~> 4.7'
 gem 'haml-rails', '~> 2.0'
 
 group :development, :test do
-  gem 'boost-styles', github: 'boost/boost-styles'
+  gem 'rubocop'
+  gem 'rubocop-performance'
+  gem 'rubocop-rails'
+  gem 'rubocop-rspec'
   # Call 'binding.pry' anywhere in the code to stop execution and get a debugger
   # console
   gem 'pry-byebug'
