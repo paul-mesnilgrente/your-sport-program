@@ -15,3 +15,11 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
+import $ from 'jquery';
+import 'foundation-sites';
+import '../../assets/stylesheets/application.scss';
+
+$(document).on('turbolinks:load', function() {
+  $(function() { $(document).foundation(); });
+});
